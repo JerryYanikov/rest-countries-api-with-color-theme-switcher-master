@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap" rel="stylesheet">
+    <title>REST Countries API with color theme switcher</title>
+</head>
+
+<body onload="redirect()">
+    <header>
+        <div class="container">
+            <a href="index.html"><h1 class="title">Where in the world?</h1></a>
+            <div class="dark-mode" id="darkMode">
+                <ion-icon name="moon-outline" class="moon-icon"></ion-icon><span class="dm-text">Dark Mode</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="back-button container">
+        <a href="index.html">
+            <div class="back">
+                <ion-icon name="arrow-back-outline" class="back-arrow"></ion-icon> Back
+            </div>
+        </a>
+    </section>
+
+    <section class="country-display container">
+        <div class="country-display-flag" id="displayFlag"></div>
+        <div class="country-display-details">
+            <div class="display-name" id="displayName">Name</div>
+            <div class="display-details">
+                <div class="display-details-left">
+                    <div class="display-detail-title">Native name: <span id="displayNativeName"></span></div>
+                    <div class="display-detail-title">Population: <span id="displayPopulation"></span></div>
+                    <div class="display-detail-title">Region: <span id="displayRegion"></span></div>
+                    <div class="display-detail-title">Sub Region: <span id="displaySubRegion"></span></div>
+                    <div class="display-detail-title">Capital: <span id="displayCapital"></span></div>
+                </div>
+                <div class="display-details-right">
+                    <div class="display-detail-title">Top Level Domain: <span id="displayDomain"></span></div>
+                    <div class="display-detail-title">Currencies: <span id="displayCurrencies"></span></div>
+                    <div class="display-detail-title">Languages: <span id="displayLanguages"></span></div>
+                </div>
+                
+            </div>
+            <div class="display-borders">
+                <div class="display-detail-title" id="cordersContainer">Border Countries:</div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script/darkmode.js"></script>
+    <script src="script/country.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

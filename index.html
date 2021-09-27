@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap" rel="stylesheet">
+    <title>REST Countries API with color theme switcher</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html"><h1 class="title">Where in the world?</h1></a>
+            <div class="dark-mode" id="darkMode">
+                <ion-icon name="moon-outline" class="moon-icon"></ion-icon><span class="dm-text">Dark Mode</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="search-filter container">
+        <div class="search-bar">
+            <ion-icon name="search-outline" class="search-icon" id="searchIcon"></ion-icon>
+            <input type="text" placeholder="Search for a country..." class="search-box" id="searchBox">
+        </div>
+            <div class="filter" id="filter">
+                <div class="filter-box" id="filterBox">
+                    <p id="filterText">Filter by Continent</p>
+                    <ion-icon name="chevron-down-outline" class="filter-arrow" id = filterArrow></ion-icon>
+                </div>
+                <ul class="filter-drop-down" id="filterDD">
+                    <li class="filter-selection">Africa</li>
+                    <li class="filter-selection">Americas</li>
+                    <li class="filter-selection">Asia</li>
+                    <li class="filter-selection">Europe</li>
+                    <li class="filter-selection">Oceania</li>
+                </ul>
+            </div>
+    </section>
+
+    <section class="countries container" id="countries">
+
+    </section>
+
+
+    <script src="script/darkmode.js"></script>
+    <script src="script/index.js"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
