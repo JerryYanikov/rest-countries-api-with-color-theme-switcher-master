@@ -1,0 +1,362 @@
+/*- Dark Blue (Dark Mode Elements): hsl(209, 23%, 22%)
+- Very Dark Blue (Dark Mode Background): hsl(207, 26%, 17%)
+- Very Dark Blue (Light Mode Text): hsl(200, 15%, 8%)
+- Dark Gray (Light Mode Input): hsl(0, 0%, 52%)
+- Very Light Gray (Light Mode Background): hsl(0, 0%, 98%)
+- White (Dark Mode Text & Light Mode Elements): hsl(0, 0%, 100%) */
+
+:root {
+    --background: hsl(0, 0%, 98%);
+    --whiteBackgrounds: (#fff);
+    --fontColor: hsl(200, 15%, 8%);
+    --boxShadow: 1px 1px 3px 0 rgb(216, 216, 216);
+    --headerBoxShadow: 0 0 5px 0 rgb(165, 165, 165);
+    --dm-bg: hsl(0, 0%, 90%); /*DM - hsl(209, 13%, 45%)*/
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 14px;
+}
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    background: var(--background);
+    color: var(--fontColor);
+}
+
+.container {
+    width: clamp(300px, 100vw, 1140px);
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: var(--fontColor);
+}
+
+/*  HEADER  */
+
+header {
+    background: var(--whiteBackgrounds);
+    box-shadow: var(--headerBoxShadow);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+}
+
+.title {
+    font-size: clamp(1.2rem, 4vw, 2rem);
+}
+
+.dark-mode { /*refering to the button*/
+    font-size: clamp(0.8rem, 5vw, 1.2rem);
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+}
+
+.moon-icon {
+    position: relative;
+    top: 3px;
+    margin-right: 7px;
+    font-size: 1.5rem;
+}
+
+/*  SEARCH AND FILTER */
+
+.search-filter {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.search-bar {
+    background: var(--whiteBackgrounds);
+    padding: 10px;
+    box-shadow: var(--boxShadow);
+    border-radius: 5px;
+}
+
+.search-icon {
+    background: var(--whiteBackgrounds);
+    position: relative;
+    top: 3px;
+    font-size: 1.3rem;
+    color: rgb(102, 102, 102);
+    padding-left: 12px;
+}
+
+.search-box {
+    background: var(--whiteBackgrounds);
+    color: var(--fontColor);
+    border: none;
+    outline: none;
+    width: clamp(100px, 30vw ,400px);
+    margin-left: 12px;
+    cursor: text;
+}
+
+.filter-box {
+    background: var(--whiteBackgrounds);
+    box-shadow: var(--boxShadow);
+    border-radius: 5px;
+    padding: 15px 20px;
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+    cursor: default;
+    user-select: none;
+}
+
+.filter-arrow {
+    position: relative;
+    top: 2px;
+}
+
+.filter-drop-down {
+    position: absolute;
+    background: white;
+    width: 190px;
+    margin-top: 3px;
+    box-shadow: va(--boxShadow);
+    border-radius: 5px;
+    list-style: none;
+    user-select: none;
+}
+
+.filter-drop-down li {
+    padding: 10px;
+    cursor:default;
+}
+
+.filter-drop-down li:hover {
+    background: rgb(182, 182, 182);
+}
+
+/*   COUNTRIES AREA */
+
+.countries {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 45px;
+    row-gap: 30px;
+    margin-bottom: 50px;
+}
+
+.country-card {
+    background: var(--whiteBackgrounds);
+    border-radius: 5px;
+    box-shadow: var(--boxShadow);
+    width: 250px;
+    max-height: 350px;
+    cursor: pointer;
+}
+
+.country-flag {
+    height: 150px;
+    width: 250px;
+    border-radius: 5px 5px 0 0;
+}
+
+.country-details {
+    padding: 30px;
+    line-height: 25px;
+}
+
+.country-details h2{
+    margin: 0 0 10px 0;
+}
+
+.country-data-line {
+    display: flex;
+}
+
+.country-data-description {
+    font-weight: 800;
+    margin-right: 3px;
+}
+
+/*  BACK BUTTON */
+
+.back-button {padding: 70px 0;}
+
+.back {
+    background: var(--whiteBackgrounds);
+    width: 100px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: var(--boxShadow);
+    cursor: pointer;
+    color: var(--fontColor);
+}
+
+.back-arrow {
+    position: relative;
+    top: 3px;
+    margin: 0 10px 0 15px;
+    font-size: 1.2rem;
+}
+
+/*  COUNTRY DISPLAY */
+
+.country-display {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+}
+
+.country-display-flag img{
+    width: clamp(250px, 40vw , 550px);
+    margin: 0 auto;
+}
+
+.country-display-details {
+    width: clamp(400px, 60vw , 700px);
+    padding: 30px 0 0 50px;
+    margin: 0 auto;
+}
+
+.display-name {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+.display-details {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.display-detail-title {
+    font-weight: 800;
+    line-height: 30px;
+}
+
+.display-details span {font-weight: 300;}
+
+.display-borders {
+    margin-top: 50px;
+}
+
+.border-country{
+    font-weight: 300;
+    font-size: 14px;
+    background: var(--whiteBackgrounds);
+    padding: 3px 30px;
+    margin:  5px;
+    box-shadow: var(--boxShadow);
+    display: inline-block;
+}
+
+
+/*  MEDIA QUESRIES  */
+
+@media only screen and (max-width: 1200px){
+    .container {
+        width: clamp(300px, 90vw, 1140px);
+    }
+
+    .countries {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .country-display {
+        display: block;
+        align-items: center;
+        text-align: center;
+    }
+
+    .display-details {
+        text-align: left;
+        margin: 0 atuo;
+    }
+
+    .display-borders {
+        margin-bottom: 50px;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .container {
+        width: clamp(300px, 90vw, 1140px);
+    }
+
+    .countries {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .display-details {
+        display: block;
+    }
+
+    .display-borders {
+        text-align: left;
+    }
+
+    .border-country{
+        text-align: center;
+        display: block;
+        width: 270px;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .container {
+        width: 300px;
+    }
+
+    .title {
+        font-size: 1.3rem;
+    }
+
+    .dm-text {
+        display: none;
+    }
+
+    .dark-mode {
+        background: var(--dm-bg);
+        border-radius: 50%;
+    }
+
+    .moon-icon {
+        position: relative;
+        left: 3px;
+    }
+
+    .search-filter {
+        display: block;
+    }
+
+    .search-bar {
+        width: 220px;
+        margin-bottom: 30px;
+    }
+
+    .filter-box {
+        width: 200px;
+    }
+
+    .filter-drop-down {
+        width: 240px;
+    }
+
+    .countries {
+        grid-template-columns: 1fr;
+    }
+
+    .country-display-details {
+        display: block;
+        width: 300px;
+        margin: 0 auto;
+        padding: 30px 0;
+    }
+}
