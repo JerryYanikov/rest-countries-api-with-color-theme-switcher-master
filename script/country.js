@@ -25,7 +25,7 @@ const displayLanguages = document.getElementById('displayLanguages');
 const bordersContainer = document.getElementById('cordersContainer');
 
 //Set results to page
-flag.innerHTML = `<img src="${country.flags[0]}">`;
+flag.innerHTML = `<img src="${country.flags.png}">`;
 displayName.innerHTML = country.name;
 displayNativeName.innerHTML = country.nativeName;
 displayPopulation.innerHTML = country.population.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
