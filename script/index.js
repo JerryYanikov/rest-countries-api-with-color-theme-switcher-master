@@ -49,7 +49,7 @@ fetch('https://restcountries.com/v2/all')
             for (let i = 0; i < data.length; i++) {
                 let countryCard = document.createElement('div');
                 countryCard.className = 'country-card';
-                countryCard.innerHTML = `<img class="country-flag" id="countryFlag" src=${data[i].flags[1]}></img><div class="country-details"><h2 id="countryName">${data[i].name}</h2><div class="country-data-line"><div class="country-data-description">Population:</div><div id="poplation">${(data[i].population).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</div></div><div class="country-data-line"><div class="country-data-description">Region:</div><div id="region">${data[i].region}</div></div><div class="country-data-line"><div class="country-data-description">Capital:</div><div id="capital">${data[i].capital}</div></div></div>`;
+                countryCard.innerHTML = `<img class="country-flag" id="countryFlag" src=${data[i].flag}></img><div class="country-details"><h2 id="countryName">${data[i].name}</h2><div class="country-data-line"><div class="country-data-description">Population:</div><div id="poplation">${(data[i].population).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</div></div><div class="country-data-line"><div class="country-data-description">Region:</div><div id="region">${data[i].region}</div></div><div class="country-data-line"><div class="country-data-description">Capital:</div><div id="capital">${data[i].capital}</div></div></div>`;
                 countries.appendChild(countryCard);
                 countryCard.addEventListener('click', function (e) {
                     sessionStorage.setItem('country', JSON.stringify(data[i])); //Save country details to session storage and stringify
